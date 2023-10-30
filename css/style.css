@@ -1,0 +1,589 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 70%;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+}
+
+html, body {
+    font-family: Rubik;
+    color: #180202;
+    position: relative;
+}
+
+h1 {
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin: 3px 0 45px 0;
+    color: #FFF;
+}
+
+h2 {
+    color: #180202;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+svg path {
+    stroke:inherit;
+    stroke-width:inherit;
+    fill:inherit;
+}
+
+/* !HERO PAGE */
+
+#hero {
+    background: url(/images/Background.png) no-repeat center/ cover;
+    height: 100vh;
+}
+
+.header {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    animation: header-outside 1s;
+}
+
+@keyframes header-outside {
+    0% {
+        transform: translateY(-200px);
+    }
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.nav-line {
+    width: 2px;
+    height: 47px;
+    opacity: 0.5;
+    background: #FFF;
+}
+
+.nav-background {
+    width: 47px;
+    height: 47px;
+    background: #FFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-background ion-icon {
+    color: #FF4948;
+}
+
+.nav-background:hover {
+    background: none;
+    outline: 2px solid #fff;
+}
+
+.nav-background:hover ion-icon {
+    color: #FFF;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 95px;
+    margin-top: 70px;
+}
+
+.heroleft img {
+    animation: heroimg 1s;
+}
+
+@keyframes heroimg {
+    0% {
+        transform: translateX(-900px) rotate(-180deg);
+    }
+}
+
+.heroright {
+    animation: right-text 1s;
+}
+
+@keyframes right-text {
+    0% {
+        transform: translateX(  900px) rotate(-180deg);
+    }
+}
+
+.heroright h5 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 140%; /* 30.8px */
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    color: #FFF;
+}
+
+.newprice {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 130%; /* 57.2px */
+}
+
+.priceline {
+    width: 2px;
+    height: 57px;
+    background: #FFF;
+}
+
+.oldprice {
+    font-size: 31px;
+    font-weight: 300;
+    line-height: 140%;
+    text-decoration: solid line-through;
+}
+
+.heroright button {
+    display: flex;
+    width: 191px;
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 62px;
+    background: #FFF;
+    color: #FF4948;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 140%; /* 30.8px */
+    margin-top: 35px;
+}
+
+.heroright button:hover {
+    background: none;
+    outline: 4px solid #FFF;
+    color: #FFF;
+}
+
+
+/* !SLIDERS */
+
+.slides h2 {
+    width: 508px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.swiper {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 100px 0;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.swiper-slide img {
+    width: 323px;
+    height: 302px;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.swiper-slide img:hover {
+    transform: scale(130%);
+}
+
+/* !GOOD */
+
+.good {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.good-left h2 {
+    width: 460px;
+    margin-bottom: 50px;
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.battery {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.character h4 {
+    color: #180202;
+    font-size: 31px;
+    font-weight: 500;
+    line-height: 140%; /* 43.4px */
+}
+
+.character p {
+    color: #180202;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    margin: 5px 0 10px 0;
+}
+
+.character a {
+    color: #FF4948;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%; /* 24px */
+    transition: 1s;
+}
+
+.good a:after {
+	display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #FF4948; /*задаём цвет линии*/
+    content: "";
+	transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+.good a:hover:after,
+.good a:focus:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+.good-right img {
+    animation: wave-img 12s infinite ease-in-out;
+}
+
+@keyframes wave-img {
+    0% {
+        margin-right: 240px;
+    }
+
+    50% {
+        margin: 0;
+    }
+
+    100% {
+        margin-right: 240px;
+    }
+}
+
+/* !LAST */
+
+.last {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.last-head p {
+    margin-top: 25px;
+    width: 557px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.bloks {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.blok {
+    width: 332px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    transition: 1s;
+}
+
+.blok:hover {
+    transform: scale(105%);
+}
+
+.blok-back {
+    position: relative;
+    width: 332px;
+    height: 331px;
+    border-radius: 30px;
+    background: #FFE5EE;
+}
+
+.blok-headphones {
+    position: absolute;
+    top: -50px;
+    left: 25px;
+}
+
+.basket {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    width: 80px;
+    height: 80px;
+    background: #FFE5EE;
+    border: solid 6px #FFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.stars ion-icon {
+    width: 32px;
+    height: 32px;
+    color: #FDAE38;
+}
+
+.blok-second p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.blok-second {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blok-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blok-info p {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.blok-info h5 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+/* !WHAT */
+
+.what {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 70px;
+    margin-bottom: 100px;
+}
+
+.what-right {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.what-right h2 {
+    width: 390px;
+    margin-bottom: 10px;
+}
+
+.four {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.four ion-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.four p {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+/* !FORM */
+
+#form {
+    margin-bottom: 100px;
+}
+
+.form {
+    width: 712px;
+    height: 292px;
+    border-radius: 20px;
+    background: #FFF4F4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form h2 {
+    margin-top: 50px;
+}
+
+.form p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    margin: 6px 0 36px 0;
+}
+
+.input-button {
+    position: relative;
+}
+
+.input-button input {
+    width: 503px;
+    padding: 15px 30px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 73px;
+    border: none;
+    outline: none;
+    background: #FFF;
+}
+
+.input-button button {
+    position: absolute;
+    top: -2px;
+    right: 74px;
+    display: inline-flex;
+    padding: 10px 28px;
+    align-items: flex-start;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: #FF4948;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.input-button button:hover {
+    background: none;
+    border: 1px solid #FF4948;
+    color: #FF4948;
+}
+
+/* !FOOTER */
+
+#footer {
+    background: #E86564;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+}
+
+.footer-nav a {
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.footer-nav a:after {
+	display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #FFF; /*задаём цвет линии*/
+    content: "";
+	transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+.footer-nav a:hover:after,
+.footer-nav a:focus:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-social ion-icon {
+    color: #FF4948;
+}
+
+.socials {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF;
+    border-radius: 50%;
+}
+
+.socials:hover {
+    background: none;
+    outline: 1px solid #FFF;
+}
+
+.socials:hover .footer-ion-icons {
+    color: #FFF;
+}
